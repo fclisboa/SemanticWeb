@@ -1,0 +1,70 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<link rel="stylesheet" type="text/css" href="/static/style.css" />
+<link rel="stylesheet" href="http://yui.yahooapis.com/pure/0.6.0/base-min.css">
+<link rel="stylesheet" href="http://yui.yahooapis.com/pure/0.6.0/pure-min.css">
+
+<title>SLICKGames</title>
+</head>
+
+<body>
+<div id="container">
+
+		<div id="header">
+        	<h1>Slick<span class="off">Games</span></h1>
+        </div>   
+        
+        <div id="menu">
+          
+        	<ul>
+        		<li class="menuitem"><a href="/index/?view=games">All Games</a></li>
+            	  <li class="menuitem"><a href="/index/?view=developers">Developers</a></li>
+                <li class="menuitem"><a href="/index/?view=publishers">Publishers</a></li>
+                <li class="menuitem"><a href="/index/?view=categories">Categories</a></li>
+            </ul>
+            <form class="searchbox" action="/index/" method="get"><input name="arg" type="search" placeholder="search..." />
+            <input type="hidden" value="search" name="view" />
+            </form>
+
+        </div>
+        
+        <div id="leftmenu">
+
+        <div id="leftmenu_top"></div>
+
+				<div id="leftmenu_main">    
+                
+                <h3>Categories</h3>
+                        
+                <ul>
+                  {{tags}}
+
+                </ul>
+		</div>
+                
+                
+              <div id="leftmenu_bottom"></div>
+        </div>
+        
+        
+        
+        
+		<div id="content">
+        
+        
+        <div id="content_top"></div>
+        <div id="content_main">
+        	{{content}}
+        </div>
+        <div id="content_bottom"></div>
+            
+            
+        </div>
+        <div id="recommend_right_top"><div id="recommend_main"><h4>Other games</h4></div></div>
+        <div id="recommend_right_bottom"><div id="recommend_main_bot"></div></div>
+        <div id="recommend_right">{{recommendations}}</div>
+   </div>
+</body>
+</html>

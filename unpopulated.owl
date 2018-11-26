@@ -1,0 +1,463 @@
+<?xml version="1.0"?>
+
+
+<!DOCTYPE rdf:RDF [
+    <!ENTITY owl "http://www.w3.org/2002/07/owl#" >
+    <!ENTITY swrl "http://www.w3.org/2003/11/swrl#" >
+    <!ENTITY swrlb "http://www.w3.org/2003/11/swrlb#" >
+    <!ENTITY xsd "http://www.w3.org/2001/XMLSchema#" >
+    <!ENTITY rdfs "http://www.w3.org/2000/01/rdf-schema#" >
+    <!ENTITY rdf "http://www.w3.org/1999/02/22-rdf-syntax-ns#" >
+]>
+
+
+<rdf:RDF xmlns="http://www.semanticweb.org/francisco/ontologies/2015/10/project#"
+     xml:base="http://www.semanticweb.org/francisco/ontologies/2015/10/project"
+     xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+     xmlns:owl="http://www.w3.org/2002/07/owl#"
+     xmlns:swrlb="http://www.w3.org/2003/11/swrlb#"
+     xmlns:swrl="http://www.w3.org/2003/11/swrl#"
+     xmlns:xsd="http://www.w3.org/2001/XMLSchema#"
+     xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#">
+    <owl:Ontology rdf:about="http://www.semanticweb.org/francisco/ontologies/2015/10/project"/>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Object Properties
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://www.semanticweb.org/francisco/ontologies/2015/10/project#categorizedBy -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/francisco/ontologies/2015/10/project#categorizedBy">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/francisco/ontologies/2015/10/project#Game"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/francisco/ontologies/2015/10/project#Genre"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/francisco/ontologies/2015/10/project#categoryOf -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/francisco/ontologies/2015/10/project#categoryOf">
+        <rdfs:range rdf:resource="http://www.semanticweb.org/francisco/ontologies/2015/10/project#Game"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/francisco/ontologies/2015/10/project#Genre"/>
+        <owl:inverseOf rdf:resource="http://www.semanticweb.org/francisco/ontologies/2015/10/project#categorizedBy"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/francisco/ontologies/2015/10/project#cooperatesWith -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/francisco/ontologies/2015/10/project#cooperatesWith">
+        <rdf:type rdf:resource="&owl;SymmetricProperty"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/francisco/ontologies/2015/10/project#Company"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/francisco/ontologies/2015/10/project#Company"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/francisco/ontologies/2015/10/project#developedBy -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/francisco/ontologies/2015/10/project#developedBy">
+        <rdfs:range rdf:resource="http://www.semanticweb.org/francisco/ontologies/2015/10/project#Company"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/francisco/ontologies/2015/10/project#Game"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/francisco/ontologies/2015/10/project#developerOf -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/francisco/ontologies/2015/10/project#developerOf">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/francisco/ontologies/2015/10/project#Company"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/francisco/ontologies/2015/10/project#Game"/>
+        <owl:inverseOf rdf:resource="http://www.semanticweb.org/francisco/ontologies/2015/10/project#developedBy"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/francisco/ontologies/2015/10/project#dlcOf -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/francisco/ontologies/2015/10/project#dlcOf">
+        <rdf:type rdf:resource="&owl;FunctionalProperty"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/francisco/ontologies/2015/10/project#Game"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/francisco/ontologies/2015/10/project#Game"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/francisco/ontologies/2015/10/project#originalOf -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/francisco/ontologies/2015/10/project#originalOf">
+        <rdf:type rdf:resource="&owl;InverseFunctionalProperty"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/francisco/ontologies/2015/10/project#Game"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/francisco/ontologies/2015/10/project#Game"/>
+        <owl:inverseOf rdf:resource="http://www.semanticweb.org/francisco/ontologies/2015/10/project#dlcOf"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/francisco/ontologies/2015/10/project#publishedBy -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/francisco/ontologies/2015/10/project#publishedBy">
+        <rdfs:range rdf:resource="http://www.semanticweb.org/francisco/ontologies/2015/10/project#Company"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/francisco/ontologies/2015/10/project#Game"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/francisco/ontologies/2015/10/project#publisherOf -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/francisco/ontologies/2015/10/project#publisherOf">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/francisco/ontologies/2015/10/project#Company"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/francisco/ontologies/2015/10/project#Game"/>
+        <owl:inverseOf rdf:resource="http://www.semanticweb.org/francisco/ontologies/2015/10/project#publishedBy"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Data properties
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://www.semanticweb.org/francisco/ontologies/2015/10/project#OS -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/francisco/ontologies/2015/10/project#OS">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/francisco/ontologies/2015/10/project#Game"/>
+        <rdfs:range>
+            <rdfs:Datatype>
+                <owl:oneOf>
+                    <rdf:Description>
+                        <rdf:type rdf:resource="&rdf;List"/>
+                        <rdf:first>Mac OS X</rdf:first>
+                        <rdf:rest>
+                            <rdf:Description>
+                                <rdf:type rdf:resource="&rdf;List"/>
+                                <rdf:first>SteamOS + Linux</rdf:first>
+                                <rdf:rest>
+                                    <rdf:Description>
+                                        <rdf:type rdf:resource="&rdf;List"/>
+                                        <rdf:first>Windows</rdf:first>
+                                        <rdf:rest rdf:resource="&rdf;nil"/>
+                                    </rdf:Description>
+                                </rdf:rest>
+                            </rdf:Description>
+                        </rdf:rest>
+                    </rdf:Description>
+                </owl:oneOf>
+            </rdfs:Datatype>
+        </rdfs:range>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/francisco/ontologies/2015/10/project#companyName -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/francisco/ontologies/2015/10/project#companyName">
+        <rdf:type rdf:resource="&owl;FunctionalProperty"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/francisco/ontologies/2015/10/project#Company"/>
+        <rdfs:range rdf:resource="&xsd;string"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/francisco/ontologies/2015/10/project#description -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/francisco/ontologies/2015/10/project#description">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/francisco/ontologies/2015/10/project#Game"/>
+        <rdfs:range rdf:resource="&xsd;string"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/francisco/ontologies/2015/10/project#gameName -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/francisco/ontologies/2015/10/project#gameName">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/francisco/ontologies/2015/10/project#Game"/>
+        <rdfs:range rdf:resource="&xsd;string"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/francisco/ontologies/2015/10/project#genreCategory -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/francisco/ontologies/2015/10/project#genreCategory">
+        <rdf:type rdf:resource="&owl;FunctionalProperty"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/francisco/ontologies/2015/10/project#Genre"/>
+        <rdfs:range rdf:resource="&xsd;string"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/francisco/ontologies/2015/10/project#id -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/francisco/ontologies/2015/10/project#id">
+        <rdf:type rdf:resource="&owl;FunctionalProperty"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/francisco/ontologies/2015/10/project#Game"/>
+        <rdfs:range rdf:resource="&xsd;string"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/francisco/ontologies/2015/10/project#price -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/francisco/ontologies/2015/10/project#price">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/francisco/ontologies/2015/10/project#Game"/>
+        <rdfs:range rdf:resource="&xsd;double"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/francisco/ontologies/2015/10/project#releaseDate -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/francisco/ontologies/2015/10/project#releaseDate">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/francisco/ontologies/2015/10/project#Game"/>
+        <rdfs:range rdf:resource="&xsd;dateTime"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Classes
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://www.semanticweb.org/francisco/ontologies/2015/10/project#Company -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/francisco/ontologies/2015/10/project#Company">
+        <owl:disjointWith rdf:resource="http://www.semanticweb.org/francisco/ontologies/2015/10/project#Game"/>
+        <owl:disjointWith rdf:resource="http://www.semanticweb.org/francisco/ontologies/2015/10/project#Genre"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/francisco/ontologies/2015/10/project#Game -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/francisco/ontologies/2015/10/project#Game">
+        <owl:disjointWith rdf:resource="http://www.semanticweb.org/francisco/ontologies/2015/10/project#Genre"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/francisco/ontologies/2015/10/project#Genre -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/francisco/ontologies/2015/10/project#Genre"/>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Rules
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    <rdf:Description rdf:about="urn:swrl#dev1">
+        <rdf:type rdf:resource="&swrl;Variable"/>
+    </rdf:Description>
+    <rdf:Description rdf:about="urn:swrl#game1">
+        <rdf:type rdf:resource="&swrl;Variable"/>
+    </rdf:Description>
+    <rdf:Description rdf:about="urn:swrl#pub1">
+        <rdf:type rdf:resource="&swrl;Variable"/>
+    </rdf:Description>
+    <rdf:Description rdf:about="urn:swrl#pub2">
+        <rdf:type rdf:resource="&swrl;Variable"/>
+    </rdf:Description>
+    <rdf:Description rdf:about="urn:swrl#dev2">
+        <rdf:type rdf:resource="&swrl;Variable"/>
+    </rdf:Description>
+    <rdf:Description>
+        <rdf:type rdf:resource="&swrl;Imp"/>
+        <swrl:head>
+            <rdf:Description>
+                <rdf:type rdf:resource="&swrl;AtomList"/>
+                <rdf:rest rdf:resource="&rdf;nil"/>
+                <rdf:first>
+                    <rdf:Description>
+                        <rdf:type rdf:resource="&swrl;IndividualPropertyAtom"/>
+                        <swrl:propertyPredicate rdf:resource="http://www.semanticweb.org/francisco/ontologies/2015/10/project#cooperatesWith"/>
+                        <swrl:argument1 rdf:resource="urn:swrl#pub1"/>
+                        <swrl:argument2 rdf:resource="urn:swrl#pub2"/>
+                    </rdf:Description>
+                </rdf:first>
+            </rdf:Description>
+        </swrl:head>
+        <swrl:body>
+            <rdf:Description>
+                <rdf:type rdf:resource="&swrl;AtomList"/>
+                <rdf:rest>
+                    <rdf:Description>
+                        <rdf:type rdf:resource="&swrl;AtomList"/>
+                        <rdf:first>
+                            <rdf:Description>
+                                <rdf:type rdf:resource="&swrl;IndividualPropertyAtom"/>
+                                <swrl:propertyPredicate rdf:resource="http://www.semanticweb.org/francisco/ontologies/2015/10/project#publisherOf"/>
+                                <swrl:argument2 rdf:resource="urn:swrl#game1"/>
+                                <swrl:argument1 rdf:resource="urn:swrl#pub2"/>
+                            </rdf:Description>
+                        </rdf:first>
+                        <rdf:rest>
+                            <rdf:Description>
+                                <rdf:type rdf:resource="&swrl;AtomList"/>
+                                <rdf:rest rdf:resource="&rdf;nil"/>
+                                <rdf:first>
+                                    <rdf:Description>
+                                        <rdf:type rdf:resource="&swrl;DifferentIndividualsAtom"/>
+                                        <swrl:argument1 rdf:resource="urn:swrl#pub1"/>
+                                        <swrl:argument2 rdf:resource="urn:swrl#pub2"/>
+                                    </rdf:Description>
+                                </rdf:first>
+                            </rdf:Description>
+                        </rdf:rest>
+                    </rdf:Description>
+                </rdf:rest>
+                <rdf:first>
+                    <rdf:Description>
+                        <rdf:type rdf:resource="&swrl;IndividualPropertyAtom"/>
+                        <swrl:propertyPredicate rdf:resource="http://www.semanticweb.org/francisco/ontologies/2015/10/project#publisherOf"/>
+                        <swrl:argument2 rdf:resource="urn:swrl#game1"/>
+                        <swrl:argument1 rdf:resource="urn:swrl#pub1"/>
+                    </rdf:Description>
+                </rdf:first>
+            </rdf:Description>
+        </swrl:body>
+    </rdf:Description>
+    <rdf:Description>
+        <rdf:type rdf:resource="&swrl;Imp"/>
+        <swrl:body>
+            <rdf:Description>
+                <rdf:type rdf:resource="&swrl;AtomList"/>
+                <rdf:rest>
+                    <rdf:Description>
+                        <rdf:type rdf:resource="&swrl;AtomList"/>
+                        <rdf:rest>
+                            <rdf:Description>
+                                <rdf:type rdf:resource="&swrl;AtomList"/>
+                                <rdf:rest rdf:resource="&rdf;nil"/>
+                                <rdf:first>
+                                    <rdf:Description>
+                                        <rdf:type rdf:resource="&swrl;DifferentIndividualsAtom"/>
+                                        <swrl:argument1 rdf:resource="urn:swrl#dev1"/>
+                                        <swrl:argument2 rdf:resource="urn:swrl#dev2"/>
+                                    </rdf:Description>
+                                </rdf:first>
+                            </rdf:Description>
+                        </rdf:rest>
+                        <rdf:first>
+                            <rdf:Description>
+                                <rdf:type rdf:resource="&swrl;IndividualPropertyAtom"/>
+                                <swrl:propertyPredicate rdf:resource="http://www.semanticweb.org/francisco/ontologies/2015/10/project#developerOf"/>
+                                <swrl:argument1 rdf:resource="urn:swrl#dev2"/>
+                                <swrl:argument2 rdf:resource="urn:swrl#game1"/>
+                            </rdf:Description>
+                        </rdf:first>
+                    </rdf:Description>
+                </rdf:rest>
+                <rdf:first>
+                    <rdf:Description>
+                        <rdf:type rdf:resource="&swrl;IndividualPropertyAtom"/>
+                        <swrl:propertyPredicate rdf:resource="http://www.semanticweb.org/francisco/ontologies/2015/10/project#developerOf"/>
+                        <swrl:argument1 rdf:resource="urn:swrl#dev1"/>
+                        <swrl:argument2 rdf:resource="urn:swrl#game1"/>
+                    </rdf:Description>
+                </rdf:first>
+            </rdf:Description>
+        </swrl:body>
+        <swrl:head>
+            <rdf:Description>
+                <rdf:type rdf:resource="&swrl;AtomList"/>
+                <rdf:rest rdf:resource="&rdf;nil"/>
+                <rdf:first>
+                    <rdf:Description>
+                        <rdf:type rdf:resource="&swrl;IndividualPropertyAtom"/>
+                        <swrl:propertyPredicate rdf:resource="http://www.semanticweb.org/francisco/ontologies/2015/10/project#cooperatesWith"/>
+                        <swrl:argument1 rdf:resource="urn:swrl#dev1"/>
+                        <swrl:argument2 rdf:resource="urn:swrl#dev2"/>
+                    </rdf:Description>
+                </rdf:first>
+            </rdf:Description>
+        </swrl:head>
+    </rdf:Description>
+    <rdf:Description>
+        <rdf:type rdf:resource="&swrl;Imp"/>
+        <swrl:head>
+            <rdf:Description>
+                <rdf:type rdf:resource="&swrl;AtomList"/>
+                <rdf:rest rdf:resource="&rdf;nil"/>
+                <rdf:first>
+                    <rdf:Description>
+                        <rdf:type rdf:resource="&swrl;IndividualPropertyAtom"/>
+                        <swrl:propertyPredicate rdf:resource="http://www.semanticweb.org/francisco/ontologies/2015/10/project#cooperatesWith"/>
+                        <swrl:argument1 rdf:resource="urn:swrl#dev1"/>
+                        <swrl:argument2 rdf:resource="urn:swrl#pub1"/>
+                    </rdf:Description>
+                </rdf:first>
+            </rdf:Description>
+        </swrl:head>
+        <swrl:body>
+            <rdf:Description>
+                <rdf:type rdf:resource="&swrl;AtomList"/>
+                <rdf:rest>
+                    <rdf:Description>
+                        <rdf:type rdf:resource="&swrl;AtomList"/>
+                        <rdf:rest>
+                            <rdf:Description>
+                                <rdf:type rdf:resource="&swrl;AtomList"/>
+                                <rdf:rest rdf:resource="&rdf;nil"/>
+                                <rdf:first>
+                                    <rdf:Description>
+                                        <rdf:type rdf:resource="&swrl;DifferentIndividualsAtom"/>
+                                        <swrl:argument1 rdf:resource="urn:swrl#dev1"/>
+                                        <swrl:argument2 rdf:resource="urn:swrl#pub1"/>
+                                    </rdf:Description>
+                                </rdf:first>
+                            </rdf:Description>
+                        </rdf:rest>
+                        <rdf:first>
+                            <rdf:Description>
+                                <rdf:type rdf:resource="&swrl;IndividualPropertyAtom"/>
+                                <swrl:propertyPredicate rdf:resource="http://www.semanticweb.org/francisco/ontologies/2015/10/project#publisherOf"/>
+                                <swrl:argument2 rdf:resource="urn:swrl#game1"/>
+                                <swrl:argument1 rdf:resource="urn:swrl#pub1"/>
+                            </rdf:Description>
+                        </rdf:first>
+                    </rdf:Description>
+                </rdf:rest>
+                <rdf:first>
+                    <rdf:Description>
+                        <rdf:type rdf:resource="&swrl;IndividualPropertyAtom"/>
+                        <swrl:propertyPredicate rdf:resource="http://www.semanticweb.org/francisco/ontologies/2015/10/project#developerOf"/>
+                        <swrl:argument1 rdf:resource="urn:swrl#dev1"/>
+                        <swrl:argument2 rdf:resource="urn:swrl#game1"/>
+                    </rdf:Description>
+                </rdf:first>
+            </rdf:Description>
+        </swrl:body>
+    </rdf:Description>
+</rdf:RDF>
+
+
+
+<!-- Generated by the OWL API (version 3.5.1) http://owlapi.sourceforge.net -->
+

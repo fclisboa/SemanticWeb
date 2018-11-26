@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<catalog prefer="public" xmlns="urn:oasis:names:tc:entity:xmlns:xml:catalog">
+    <group id="Folder Repository, directory=, recursive=true, Auto-Update=true, version=2" prefer="public" xml:base="">
+        <uri id="Automatically generated entry, Timestamp=1452440232912" name="http://www.semanticweb.org/francisco/ontologies/2015/10/inferredOnt" uri="inferredOnt.owl"/>
+        <uri id="Automatically generated entry, Timestamp=1452440232912" name="http://www.semanticweb.org/francisco/ontologies/2015/10/project" uri="unpopulated.owl"/>
+        <uri id="Automatically generated entry, Timestamp=1452440232912" name="shadowed:http://www.semanticweb.org/francisco/ontologies/2015/10/project" uri="EventualmenteLixo/projecto.owl"/>
+    </group>
+</catalog>
